@@ -21,7 +21,7 @@ services:
             DB_USERNAME: 'pterodactyl'
             DB_PASSWORD: ''
             HASHIDS_SALT: ''
-            HASHIDS_LENGTH: ''
+            HASHIDS_LENGTH: '8'
             MAIL_DRIVER: 'array'
             MAIL_HOST: 'X.com'
             MAIL_PORT: '587'
