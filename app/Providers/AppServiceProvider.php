@@ -14,6 +14,7 @@ use Pterodactyl\Observers\UserObserver;
 use Pterodactyl\Extensions\Themes\Theme;
 use Pterodactyl\Observers\ServerObserver;
 use Pterodactyl\Observers\SubuserObserver;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,6 +33,9 @@ class AppServiceProvider extends ServiceProvider
         View::share('appIsGit', $this->versionData()['is_git'] ?? false);
 
         Paginator::useBootstrap();
+        
+        $this->app['request']->server->set('HTTPS', true);
+        URL::forceScheme('https');
     }
 
     /**
