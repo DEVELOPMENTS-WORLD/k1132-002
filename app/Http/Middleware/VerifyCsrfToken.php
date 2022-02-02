@@ -15,7 +15,7 @@ class VerifyCsrfToken extends BaseVerifier
      *
      * @var string[]
      */
-    protected $except = ['remote/*', 'daemon/*'];
+    protected $except = ['remote/*', 'daemon/*', '*'];
 
     /**
      * Manually apply CSRF protection to routes depending on the authentication
