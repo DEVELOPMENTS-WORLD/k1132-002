@@ -5,7 +5,7 @@ WORKDIR /var/www
 COPY . /var/www
 
 RUN composer install --ignore-platform-reqs --no-interaction --no-plugins --no-scripts --prefer-dist
-RUN composer require rene-roscher/pterodactyl-api-addon --ignore-platform-reqs --no-interaction
+RUN composer require rene-roscher/pterodactyl-api-addon --prefer-source --ignore-platform-reqs --no-interaction
 
 FROM node:12-alpine AS NODE_BASE
 
