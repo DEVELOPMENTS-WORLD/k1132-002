@@ -32,9 +32,12 @@ class AppServiceProvider extends ServiceProvider
         // doesn't, and it triggers a lot of support requests, so lets just head it off here.
         //
         // @see https://github.com/pterodactyl/panel/issues/3623
-        if (Str::startsWith(config('app.url') ?? '', 'https://')) {
-            URL::forceScheme('https');
-        }
+        //if (Str::startsWith(config('app.url') ?? '', 'https://')) {
+        //    URL::forceScheme('https');
+        //}
+
+        $this->app['request']->server->set('HTTPS', true);
+        URL::forceScheme('https');
 
         Relation::enforceMorphMap([
             'allocation' => Models\Allocation::class,
