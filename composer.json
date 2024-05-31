@@ -24,7 +24,7 @@
         "ext-pdo_mysql": "*",
         "ext-posix": "*",
         "ext-zip": "*",
-        "rene-roscher/pterodactyl-api-addon": "^2.31",
+        "rene-roscher/pterodactyl-api-addon": "dev-main",
         "aws/aws-sdk-php": "~3.260.1",
         "doctrine/dbal": "~3.6.0",
         "guzzlehttp/guzzle": "~7.5.0",
