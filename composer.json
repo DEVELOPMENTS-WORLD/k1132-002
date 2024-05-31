@@ -38,13 +38,11 @@
         "league/flysystem-aws-s3-v3": "~3.12.2",
         "league/flysystem-memory": "~3.10.3",
         "matriphe/iso-639": "~1.2",
-        "monolog/monolog": "^3.6",
         "phpseclib/phpseclib": "~3.0.18",
         "pragmarx/google2fa": "~8.0.0",
         "predis/predis": "~2.1.1",
         "prologue/alerts": "~1.1.0",
         "psr/cache": "~3.0.0",
-        "rene-roscher/pterodactyl-api-addon": "^2.3",
         "s1lentium/iptools": "~1.2.0",
         "spatie/laravel-fractal": "~6.0.3",
         "spatie/laravel-query-builder": "~5.1.2",
@@ -63,6 +61,7 @@
         "laravel/sail": "~1.21.0",
         "mockery/mockery": "~1.5.1",
         "nunomaduro/collision": "~7.0.5",
+        "phpunit/phpunit": "~10.0.11",
         "spatie/laravel-ignition": "~2.0.0"
     },
     "autoload": {
@@ -99,7 +98,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "8.2"
+            "php": "8.1.0"
         }
     },
     "minimum-stability": "stable",
