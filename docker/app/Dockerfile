@@ -7,15 +7,14 @@ COPY . /var/www
 RUN composer install --ignore-platform-reqs --no-interaction --no-plugins --no-scripts --prefer-dist
 RUN composer require rene-roscher/pterodactyl-api-addon --prefer-source --ignore-platform-reqs --no-interaction
 
-FROM node:16-alpine AS NODE_BASE
+FROM node:14-alpine AS NODE_BASE
 
 WORKDIR /var/www
 
 COPY --from=COMPOSER_BASE /var/www .
 
-RUN yarn install
-
-RUN NODE_OPTIONS=--openssl-legacy-provider yarn run build:production
+RUN yarn install --frozen-lockfile \
+    && yarn run build:production
 
 FROM ghcr.io/rene-roscher/php-docker:php-8.2 AS APP_BASE
 
