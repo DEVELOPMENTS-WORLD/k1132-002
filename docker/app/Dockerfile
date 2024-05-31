@@ -6,7 +6,7 @@ COPY . /var/www
 
 RUN docker-php-ext-install pdo_mysql bcmath
 
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+RUN composer install --ignore-platform-reqs --no-interaction --prefer-dist --optimize-autoloader
 #RUN composer install --ignore-platform-reqs --no-interaction --no-plugins --no-scripts --prefer-dist
 #RUN composer require rene-roscher/pterodactyl-api-addon --ignore-platform-reqs --no-interaction
 
